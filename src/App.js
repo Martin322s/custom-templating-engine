@@ -1,4 +1,5 @@
 import "./App.css";
+import LoginForm from "./components/LoginForm";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           Edit the <code>./src</code> folder to add components.
         </div>
       </div>
+      <LoginForm />
     </div>
   );
 }
