@@ -1,6 +1,6 @@
 import { FOR_REGEX, IF_REGEX } from '../config/constants';
 
-export function parsedTemplate(template) {
+export function parseTemplate(template) {
     let parsed = '';
 
     parsed = template.replace(FOR_REGEX, (match, item, array, content) => {

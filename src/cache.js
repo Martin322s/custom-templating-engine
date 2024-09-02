@@ -1,4 +1,4 @@
-const cache = new Map();
+export const cache = new Map();
 
 export function has(templateName) {
     return cache.has(templateName);
