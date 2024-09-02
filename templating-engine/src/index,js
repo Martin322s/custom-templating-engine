@@ -1,10 +1,7 @@
-// src/index.js
 import { TemplateEngine } from "./TemplatingEngine.js";
 
-// Initialize template engine
 export const engine = new TemplateEngine();
 
-// Register template
 engine.registerTemplate('base', `
   <h1>{{title}}</h1>
   <ul>
@@ -14,10 +11,7 @@ engine.registerTemplate('base', `
   </ul>
 `);
 
-// Render template
 const output = engine.render('base', {
     title: 'Shopping List',
     items: ['Apples', 'Bananas', 'Oranges'],
 });
-
-console.log(output);

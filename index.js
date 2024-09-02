@@ -5,10 +5,8 @@ import { TemplateEngine } from './templating-engine/src/TemplatingEngine.js' // 
 const app = express();
 const port = 3001;
 
-// Initialize custom template engine
 const engine = new TemplateEngine();
 
-// Register your templates (you can load from file or directly in memory)
 engine.registerTemplate('home', `
   <h1>{{title}}</h1>
   <ul>
@@ -18,18 +16,15 @@ engine.registerTemplate('home', `
   </ul>
 `);
 
-// Custom view engine function for Express
 app.engine('cte', (filePath, options, callback) => {
-    const templateName = path.basename(filePath, '.cte'); // Use the file name as template name
-    const rendered = engine.render(templateName, options); // Render with custom engine
+    const templateName = path.basename(filePath, '.cte');
+    const rendered = engine.render(templateName, options);
     return callback(null, rendered);
 });
 
-// Set '.cte' as the extension for your custom templates
-app.set('views', './views'); // Directory where your templates are located
+app.set('views', './views');
 app.set('view engine', 'cte');
 
-// Define a route
 app.get('/', (req, res) => {
     const data = {
         title: 'Shopping List',
@@ -41,7 +36,6 @@ app.get('/', (req, res) => {
     res.render('home', data);
 });
 
-// Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
