@@ -1,6 +1,6 @@
-import { parseTemplate } from './parser';
-import { renderTemplate } from './renderer';
-import { cache } from './cache';
+import { parseTemplate } from './parser.js';
+import { renderTemplate } from './renderer.js';
+import { cache } from './cache.js';
 
 export class TemplateEngine {
     constructor() {

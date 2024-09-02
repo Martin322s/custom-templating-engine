@@ -1,8 +1,8 @@
 // src/index.js
-const TemplateEngine = require('./TemplateEngine');
+import { TemplateEngine } from "./TemplatingEngine.js";
 
 // Initialize template engine
-const engine = new TemplateEngine();
+export const engine = new TemplateEngine();
 
 // Register template
 engine.registerTemplate('base', `
