@@ -1,0 +1,23 @@
+// src/index.js
+const TemplateEngine = require('./TemplateEngine');
+
+// Initialize template engine
+const engine = new TemplateEngine();
+
+// Register template
+engine.registerTemplate('base', `
+  <h1>{{title}}</h1>
+  <ul>
+    {% for item in items %}
+      <li>{{item}}</li>
+    {% endfor %}
+  </ul>
+`);
+
+// Render template
+const output = engine.render('base', {
+    title: 'Shopping List',
+    items: ['Apples', 'Bananas', 'Oranges'],
+});
+
+console.log(output);
