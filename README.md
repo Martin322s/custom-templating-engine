@@ -14,12 +14,12 @@ A simple templating engine built in JavaScript to render dynamic HTML content by
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-templating-library.git
+    git clone https://github.com/Martin322s/custom-templating-engine.git
     ```
 
 2. Navigate into the project directory:
     ```bash
-    cd your-templating-library
+    cd custom-templating-engine
     ```
 
 3. Install dependencies (if any):
